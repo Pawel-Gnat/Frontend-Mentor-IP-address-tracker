@@ -1,0 +1,21 @@
+/* IMPORTS - VARIABLES */
+@import './abstracts/colors';
+
+/* SITE */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+	font-size: 1.8rem;
+	min-height: 100vh;
+}
