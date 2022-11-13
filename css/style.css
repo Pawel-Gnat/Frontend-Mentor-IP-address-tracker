@@ -15,6 +15,180 @@ html {
 
 body {
   font-family: "Rubik", sans-serif;
-  font-size: 1.8rem;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
+  text-align: center;
+}
+
+input {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.8rem;
+}
+
+main {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: rgba(150, 150, 150, 0.1);
+}
+
+.header {
+  height: 30rem;
+  width: 100%;
+  padding: 3rem 2.5rem 0;
+  background: url(../images/pattern-bg.png) no-repeat center;
+  background-size: cover;
+}
+.header__heading {
+  font-size: clamp(2.4rem, 3vw, 3rem);
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.searchbox,
+.infobox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 2.5rem;
+  border-radius: 1.5rem;
+  background-color: #fff;
+}
+
+.searchbox {
+  top: -21.5rem;
+  height: 6rem;
+  max-width: 55.5rem;
+  overflow: hidden;
+}
+.searchbox__input {
+  width: 100%;
+  padding: 2rem 2.5rem;
+  border: none;
+  background-color: transparent;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.searchbox__btn {
+  min-width: 6rem;
+  height: 100%;
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.searchbox__btn:hover {
+  background-color: hsl(0deg, 0%, 17%);
+}
+
+.error-container {
+  display: none;
+  font-size: 1.4rem;
+  position: absolute;
+  top: -15rem;
+  width: 100%;
+  padding: 0 4rem;
+  margin: 0 auto;
+  color: red;
+  text-align: center;
+  z-index: 1;
+}
+
+.active {
+  display: block;
+}
+
+.infobox {
+  top: -19.1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 65rem;
+  padding-bottom: 2rem;
+}
+.infobox__description {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 2.5rem 0 1rem;
+  color: hsl(0deg, 0%, 59%);
+}
+.infobox__result {
+  font-weight: 500;
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.footer {
+  font-size: 1.4rem;
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .searchbox {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 700px) {
+  .infobox {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1000px) {
+  .header {
+    height: 28rem;
+  }
+  .searchbox {
+    top: -19rem;
+  }
+  .error-container {
+    top: -11rem;
+  }
+  .infobox {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    top: -14rem;
+    max-width: 110rem;
+    padding-bottom: 0;
+    margin: 0 2.5rem;
+  }
+  .infobox__data {
+    width: 27.5rem;
+    margin: 2.75rem 0;
+    padding: 0 6rem 0 3rem;
+    border-right: 1px solid rgba(150, 150, 150, 0.4);
+    text-align: left;
+  }
+  .infobox__data:nth-child(4) {
+    border-right: none;
+  }
+}
+@media (min-width: 1150px) {
+  .infobox {
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=style.css.map */

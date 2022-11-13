@@ -6,36 +6,61 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Frontend Mentor IP address tracker</title>
-	<link rel="icon" type="image/png" href="./images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" href="./images/favicon-32x32.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./css/style.css" />
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
 		integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+		integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
 </head>
 
 <body>
-	<header>
-
+	<header class="header">
+		<h1 class="header__heading"> IP address tracker</h1>
 	</header>
-
 	<main>
-		<section>
+		<div class="searchbox">
+			<input type="text" class="searchbox__input" placeholder="Search for any IP address or domain">
+			<button type="button" class="searchbox__btn"><img src="./images/icon-arrow.svg" alt=""
+					class="searchbox__arrow-icon" aria-hidden="true"></button>
+		</div>
 
-		</section>
+		<div class="error-container">
+			<p class="error-container__text"></p>
+		</div>
+
+		<div class="infobox">
+			<div class="infobox__data">
+				<p class="infobox__description">ip address</p>
+				<p class="infobox__result"></p>
+			</div>
+			<div class="infobox__data">
+				<p class="infobox__description">location</p>
+				<p class="infobox__result"></p>
+			</div>
+			<div class="infobox__data">
+				<p class="infobox__description">timezone</p>
+				<p class="infobox__result"></p>
+			</div>
+			<div class="infobox__data">
+				<p class="infobox__description">isp</p>
+				<p class="infobox__result"></p>
+			</div>
+		</div>
+
+		<div class="map" id="map"></div>
 	</main>
 
-	<footer>
+	<footer class="footer">
 		<p class="footer__author">Challenge by <a href="https://www.frontendmentor.io" target="_blank"
 				rel="noopener">Frontend Mentor</a>.
 			Coded by <a href="https://github.com/Pawel-Gnat" target="_blank" rel="noopener">Paweł Gnat</a>.</p>
 	</footer>
-
 	<script type='module' src="./js/main.js"></script>
-	<script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-		integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
-
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </body>
 
 </html>
