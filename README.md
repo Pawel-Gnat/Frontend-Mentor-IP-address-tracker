@@ -24,7 +24,7 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 
 ## My process
 
-I used ip-api | pro instead of IP Geolocation API by IPify, because I found better free version. It has just free endpoint limited to 45 requests per minute. I connected 2 APIs by recursion.
+I used ip-api | pro instead of IP Geolocation API by IPify, because I found better free version. It has just free endpoint limited to 45 requests per minute. I connected 2 APIs (second is leaflet.js) by recursion.
 
 ### Built with
 
