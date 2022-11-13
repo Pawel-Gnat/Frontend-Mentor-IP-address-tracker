@@ -84,7 +84,7 @@ function handleError(error) {
 
 setTimeout(() => {
 	getInformationsFromIP()
-}, 1500)
+}, 5000)
 
 searchBtn.addEventListener('click', getIPAddress)
 document.addEventListener('keydown', e => {
