@@ -82,7 +82,10 @@ function handleError(error) {
 	}, 1000)
 }
 
-getInformationsFromIP()
+setTimeout(() => {
+	getInformationsFromIP()
+}, 1500)
+
 searchBtn.addEventListener('click', getIPAddress)
 document.addEventListener('keydown', e => {
 	if (e.code === 'Enter') {
