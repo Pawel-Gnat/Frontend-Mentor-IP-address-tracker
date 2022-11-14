@@ -16,7 +16,7 @@ function getIPAddress() {
 }
 
 function sendURLtoAPI(IP) {
-	const url = `http://ip-api.com/json/${IP}`
+	const url = `https://ipapi.co/${IP}/json/`
 	getInformationsFromIP(url)
 }
 
@@ -29,17 +29,17 @@ function displayAddressInformation(IP, location, timezone, ISP) {
 	ISPInformation.textContent = ISP
 }
 
-const getInformationsFromIP = async (url = 'http://ip-api.com/json/') => {
+const getInformationsFromIP = async (url = 'https://ipapi.co/json/') => {
 	try {
 		const response = await fetch(url)
 			.then(response => response.json())
 			.then(data => {
-				let latitude = data.lat
-				let longitude = data.lon
-				let IPaddress = data.query
-				let location = data.city + ', ' + data.country + ' ' + data.zip
+				let latitude = data.latitude
+				let longitude = data.longitude
+				let IPaddress = data.ip
+				let location = data.city + ', ' + data.country_name + ' ' + data.postal
 				let timezone = data.timezone
-				let ISP = data.isp
+				let ISP = data.org
 
 				displayMap(latitude, longitude)
 				displayAddressInformation(IPaddress, location, timezone, ISP)
@@ -82,9 +82,11 @@ function handleError(error) {
 	}, 1000)
 }
 
-setTimeout(() => {
-	getInformationsFromIP()
-}, 5000)
+window.onload = () => {
+	setTimeout(() => {
+		getInformationsFromIP()
+	}, 1500)
+}
 
 searchBtn.addEventListener('click', getIPAddress)
 document.addEventListener('keydown', e => {
