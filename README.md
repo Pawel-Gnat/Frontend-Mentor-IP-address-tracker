@@ -36,7 +36,7 @@ I used ipapi instead of IP Geolocation API by IPify, because I found better free
 
 ### What I learned
 
-I used ip-api | pro instead of IP Geolocation API by IPify, because I found better free version. I implemented very basic error handling. I did this task within 5 hours and I really enjoed it. It was clearly something else from static website examples.
+I used ipapi instead of IP Geolocation API by IPify, because I found better free version. I implemented very basic error handling. I did this task within 5 hours and I really enjoed it. It was clearly something else from static website examples.
 
 ## Author
 
